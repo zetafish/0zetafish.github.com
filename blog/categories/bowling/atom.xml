@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Stumbling in the Dark]]></title>
-  <link href="http://zetafish.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: bowling | Stumbling in the Dark]]></title>
+  <link href="http://zetafish.github.com/blog/categories/bowling/atom.xml" rel="self"/>
   <link href="http://zetafish.github.com/"/>
   <updated>2011-11-23T01:28:09+01:00</updated>
   <id>http://zetafish.github.com/</id>
@@ -12,50 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Using octopress]]></title>
-    <link href="http://zetafish.github.com/blog/2011/11/01/using-octopus/"/>
-    <updated>2011-11-01T00:41:00+01:00</updated>
-    <id>http://zetafish.github.com/blog/2011/11/01/using-octopus</id>
-    <content type="html"><![CDATA[<p>Started with <a href="http://octopress.org/">octopress</a> for creating my blog
-at <a href="http://zetafish.github.com/">github</a>.</p>
-
-<blockquote><p>Octopress is a framework designed for Jekyll static blogging engine<br/>powering Github pages</p><footer><strong>Octopress</strong><cite><a href='http://octopress.org/docs'>Documentation</a></cite></footer></blockquote>
-
-
-<p>Setting up was really simple. I just followed the instructions from
-the documentation and voila. In one hour a new bright and shining
-blog.</p>
-
-<p>Some interesting links:</p>
-
-<ul>
-<li><a href="http://beginrescueend.com/rvm/install/">RVM</a></li>
-<li><a href="http://daringfireball.net/projects/markdown">markdown</a> for help on
-the syntax of markdown</li>
-</ul>
-
-
-<p>Publishing is a snap, you create a new page like</p>
-
-<pre><code>rake new_page[Some cool subject]
-</code></pre>
-
-<p>That will generate a .markdown file in your <code>source/_posts</code> folder.
-After editing the file you can preview it with</p>
-
-<pre><code>rake generate
-rake preview
-</code></pre>
-
-<p>And publishing to github is a matter of</p>
-
-<pre><code>rake generate
-rake deploy
-</code></pre>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bowling kata]]></title>
@@ -82,7 +38,7 @@ to roll the extra balls to complete the bonuses.</li>
 
 <p>First we make a simple failing test</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -90,50 +46,41 @@ to roll the extra balls to complete the bonuses.</li>
 <span class='line-number'>6</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">kata</span><span class="o">.</span><span class="nv">test</span><span class="o">.</span><span class="nv">bowling</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">kata</span><span class="o">.</span><span class="nv">bowling</span><span class="p">])</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">clojure</span><span class="o">.</span><span class="nv">test</span><span class="p">]))</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">clojure</span><span class="o">.</span><span class="nv">test</span><span class="p">]))</span><span class="nv">&lt;/p&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-gutter-game</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">0</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">0</span><span class="p">)))))</span>
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="nv">&lt;p&gt;</span><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-gutter-game</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">0</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">0</span><span class="p">)))))</span>      <span class="nv">&lt;br/&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-<p>Which is simply implemented as</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>Which is simply implemented as
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">defn </span><span class="nv">score-game</span> <span class="p">[</span><span class="nv">rolls</span><span class="p">]</span>
 </span><span class='line'>  <span class="mi">0</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-<p>Add a next test:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>Add a next test:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-ones-game</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">20</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">1</span><span class="p">)))))</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-<p>Now this test fails so we modify the score-game</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>Now this test fails so we modify the score-game
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">defn </span><span class="nv">score-game</span> <span class="p">[</span><span class="nv">rolls</span><span class="p">]</span>
 </span><span class='line'>  <span class="p">(</span><span class="nb">reduce </span><span class="nv">+</span> <span class="p">(</span><span class="nb">take </span><span class="mi">20</span> <span class="nv">rolls</span><span class="p">)))</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-<p>Now add a spare</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>Now add a spare
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-spare</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">16</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">concat </span><span class="p">[</span><span class="mi">5</span> <span class="mi">5</span> <span class="mi">3</span><span class="p">]</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">0</span><span class="p">))))))</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-<p>&#8230;More to follow&#8230;</p>
+<p>...More to follow...</p>
 ]]></content>
   </entry>
   

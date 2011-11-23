@@ -1,27 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Jekyll | My Octopress Blog]]></title>
-  <link href="http://zetafish.github.com/blog/categories/jekyll/atom.xml" rel="self"/>
+  <title><![CDATA[Category: clojure | Stumbling in the Dark]]></title>
+  <link href="http://zetafish.github.com/blog/categories/clojure/atom.xml" rel="self"/>
   <link href="http://zetafish.github.com/"/>
-  <updated>2011-11-23T00:04:06+01:00</updated>
+  <updated>2011-11-23T01:28:09+01:00</updated>
   <id>http://zetafish.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Zetafish (Endymion Kasanardjo)]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Using Octopus]]></title>
-    <link href="http://zetafish.github.com/blog/2011/11/01/using-octopus/"/>
+    <title type="html"><![CDATA[Bowling kata]]></title>
+    <link href="http://zetafish.github.com/blog/2011/11/01/bowling-kata/"/>
     <updated>2011-11-01T00:41:00+01:00</updated>
-    <id>http://zetafish.github.com/blog/2011/11/01/using-octopus</id>
-    <content type="html"><![CDATA[<p>Today I started my blog with octopress.</p>
+    <id>http://zetafish.github.com/blog/2011/11/01/bowling-kata</id>
+    <content type="html"><![CDATA[<p>The bowling kata is described
+<a href="http://butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt">here</a>
+by Uncle Bob. Bowling has the following rules:</p>
 
-<p>First we make a simple failing test
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<ul>
+<li>A game consists of 10 frames</li>
+<li>In a frame a player has 2 opportunities to knock down 10 pins</li>
+<li>Score for the frame is number of knocked down pins plus bonuses for
+spares and strikes</li>
+<li>A spare is when a player knocks down 10 in two tries</li>
+<li>The bonus for a spare frame is pins knocked down in next roll</li>
+<li>A strike is when a player knocks down 10 pins in the first try</li>
+<li>The bonus for a strike frame is pins knocked down in next two rolls</li>
+<li>In the tenth frame a player who rolls a spare or strike is allowed
+to roll the extra balls to complete the bonuses.</li>
+</ul>
+
+
+<p>First we make a simple failing test</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -63,16 +80,7 @@
 </span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">16</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">concat </span><span class="p">[</span><span class="mi">5</span> <span class="mi">5</span> <span class="mi">3</span><span class="p">]</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">0</span><span class="p">))))))</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p><div><script src='https://gist.github.com/996818.js?file='></script>
-<noscript><pre><code>@@ -590,7 +590,7 @@ class SpritesTest &lt; Test::Unit::TestCase
-  it &quot;should generate a sprite from nested folders&quot; do
-    css = render &lt;&lt;-SCSS
--     @import &quot;nested/*.png&quot;;
-+     @import &quot;nested/**/*.png&quot;;
-      @include all-nested-sprites;
-    SCSS
-    assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
-</p>
+<p>...More to follow...</p>
 ]]></content>
   </entry>
   
