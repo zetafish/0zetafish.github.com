@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Stumbling in the Dark</title>
+  <title>Web frameworks for clojure - Stumbling in the Dark</title>
   <meta name="author" content="Zetafish (Endymion Kasanardjo)">
 
   
@@ -20,7 +20,7 @@ Compojure - &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zetafish.github.com">
+  <link rel="canonical" href="http://zetafish.github.com/blog/2011/11/23/web-frameworks-for-clojure">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,15 +62,12 @@ Compojure - &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/11/23/web-frameworks-for-clojure/">Web Frameworks for Clojure</a></h1>
+      <h1 class="entry-title">Web Frameworks for Clojure</h1>
     
     
       <p class="meta">
@@ -88,7 +85,7 @@ Compojure - &hellip;">
   </header>
 
 
-  <div class="entry-content"><p>Clojure has a number of frameworks for building web applications.</p>
+<div class="entry-content"><p>Clojure has a number of frameworks for building web applications.</p>
 
 <ul>
 <li><a href="http://github.com/mmcgrana/ring/wiki">Ring</a> - De facto standard base
@@ -177,186 +174,52 @@ write Ring handlers and middlewares</li>
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/11/01/using-octopus/">Using Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
   
 
-<time datetime="2011-11-01T00:41:00+01:00" pubdate>Nov 1<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
+<span class="byline author vcard">Posted by <span class="fn">Zetafish (Endymion Kasanardjo)</span></span>
 
-
-  <div class="entry-content"><p>Started with <a href="http://octopress.org/">octopress</a> for creating my blog
-at <a href="http://zetafish.github.com/">github</a>.</p>
-
-<blockquote><p>Octopress is a framework designed for Jekyll static blogging engine<br/>powering Github pages</p><footer><strong>Octopress</strong><cite><a href='http://octopress.org/docs'>Documentation</a></cite></footer></blockquote>
-
-
-<p>Setting up was really simple. I just followed the instructions from
-the documentation and voila. In one hour a new bright and shining
-blog.</p>
-
-<p>Some interesting links:</p>
-
-<ul>
-<li><a href="http://beginrescueend.com/rvm/install/">RVM</a></li>
-<li><a href="http://daringfireball.net/projects/markdown">markdown</a> for help on
-the syntax of markdown</li>
-</ul>
-
-
-<p>Publishing is a snap, you create a new page like</p>
-
-<pre><code>rake new_page[Some cool subject]
-</code></pre>
-
-<p>That will generate a .markdown file in your <code>source/_posts</code> folder.
-After editing the file you can preview it with</p>
-
-<pre><code>rake generate
-rake preview
-</code></pre>
-
-<p>And publishing to github is a matter of</p>
-
-<pre><code>rake generate
-rake deploy
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/11/01/bowling-kata/">Bowling Kata</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
 
   
 
-<time datetime="2011-11-01T00:41:00+01:00" pubdate>Nov 1<span>st</span>, 2011</time>
-        
-      </p>
+<time datetime="2011-11-23T23:37:00+01:00" pubdate>Nov 23<span>rd</span>, 2011</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>The bowling kata is described
-<a href="http://butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt">here</a>
-by Uncle Bob. Bowling has the following rules:</p>
-
-<ul>
-<li>A game consists of 10 frames</li>
-<li>In a frame a player has 2 opportunities to knock down 10 pins</li>
-<li>Score for the frame is number of knocked down pins plus bonuses for
-spares and strikes</li>
-<li>A spare is when a player knocks down 10 in two tries</li>
-<li>The bonus for a spare frame is pins knocked down in next roll</li>
-<li>A strike is when a player knocks down 10 pins in the first try</li>
-<li>The bonus for a strike frame is pins knocked down in next two rolls</li>
-<li>In the tenth frame a player who rolls a spare or strike is allowed
-to roll the extra balls to complete the bonuses.</li>
-</ul>
-
-
-<p>First we make a simple failing test</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">kata</span><span class="o">.</span><span class="nv">test</span><span class="o">.</span><span class="nv">bowling</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">kata</span><span class="o">.</span><span class="nv">bowling</span><span class="p">])</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">clojure</span><span class="o">.</span><span class="nv">test</span><span class="p">]))</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-gutter-game</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">0</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">0</span><span class="p">)))))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Which is simply implemented as</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">defn </span><span class="nv">score-game</span> <span class="p">[</span><span class="nv">rolls</span><span class="p">]</span>
-</span><span class='line'>  <span class="mi">0</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Add a next test:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-ones-game</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">20</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">1</span><span class="p">)))))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now this test fails so we modify the score-game</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">defn </span><span class="nv">score-game</span> <span class="p">[</span><span class="nv">rolls</span><span class="p">]</span>
-</span><span class='line'>  <span class="p">(</span><span class="nb">reduce </span><span class="nv">+</span> <span class="p">(</span><span class="nb">take </span><span class="mi">20</span> <span class="nv">rolls</span><span class="p">)))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now add a spare</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-spare</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">16</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">concat </span><span class="p">[</span><span class="mi">5</span> <span class="mi">5</span> <span class="mi">3</span><span class="p">]</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">0</span><span class="p">))))))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>&#8230;More to follow&#8230;</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://zetafish.github.com/blog/2011/11/23/web-frameworks-for-clojure/" data-via="" data-counturl="http://zetafish.github.com/blog/2011/11/23/web-frameworks-for-clojure/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/11/01/using-octopus/" title="Previous Post: Using octopress">&laquo; Using octopress</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -392,6 +255,7 @@ to roll the extra balls to complete the bonuses.</li>
 
   
 </aside>
+
 
     </div>
   </div>
