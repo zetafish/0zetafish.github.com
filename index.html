@@ -105,19 +105,37 @@ organization.</p>
 <h3>Personal domain</h3>
 
 <p>Secondly I decided that it would be a cool idea to have a personal
-domain point to this blog at <code>http://zetafish.github.com/</code>. This was
-in the end also pretty simple. I registered the endymionkasanardjo.nl
-domain on <a href="http://eksolutions.eu">eksolutions.eu</a> which seemed a sweet
-deal with just 5 EURO for a year. However I did not immediately see
-how to setup the forwarding. It turned out that forwarding costs an
-additional 2.40 EURO. But when looking for how to setup the forwarding
-I stumbled on the <a href="http://www.godaddy.com/">godaddy</a>, offering a .info
-domain for a measly 1.6 EURO with full access to the DNS records.</p>
+domain point to my <a href="http://zetafish.github.com/">github blog</a> And what
+I need for that is first a domain.</p>
 
-<p>Hurray. Now I have <code>http://blog.endymionkasanardjo.info/</code> pointing to
-my blog at github. The only thing that remains is finding out why I
-get the <em>Page does not exist</em> message from github. Telling me that no
-blog lives at <code>username.github.com</code>.</p>
+<p>I registered the <code>endymionkasanardjo.nl</code> domain on
+<a href="http://eksolutions.eu">eksolutions.eu</a> which seemed a sweet deal with
+just 5 EURO for a year. However I did not immediately see how to setup
+the forwarding. It turned out that forwarding costs an additional 2.40
+EURO.</p>
+
+<p>Enter <a href="http://www.godadday.com/">godaddy</a>. They offer a .info domain
+for only 1.6 EURO a year. And what is more full access to DNS record
+to manage forwarding myself.
+<a href="http://www.google.com/support/blogger/bin/answer.py?hl=en&amp;answer=58317&amp;topic=12451">Here</a>
+I found out how to set up the CNAME record with godaddy.</p>
+
+<p>Next I set up the CNAME file for my github blog. So that github knows
+what to do when someone thinks they are talking to the
+endymionkasanardjo.info domain</p>
+
+<pre><code>echo endymionkasanardjo.info &gt;&gt; source/CNAME
+rake generate
+rake deploy
+</code></pre>
+
+<p>Yipeeeee. I am fully online now, and you can visit me on:</p>
+
+<ul>
+<li><a href="http://www.endymionkasanardjo.info/">http://www.endymionkasanardjo.info/</a></li>
+<li><a href="http://blog.endymionkasanardjo.info/">http://blog.endymionkasanardjo.info/</a></li>
+</ul>
+
 </div>
   
   
