@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: clojure | Stumbling in the Dark]]></title>
-  <link href="http://zetafish.github.com/blog/categories/clojure/atom.xml" rel="self"/>
+  <title><![CDATA[Category: compojure | Stumbling in the Dark]]></title>
+  <link href="http://zetafish.github.com/blog/categories/compojure/atom.xml" rel="self"/>
   <link href="http://zetafish.github.com/"/>
   <updated>2011-11-26T12:03:01+01:00</updated>
   <id>http://zetafish.github.com/</id>
@@ -98,77 +98,6 @@ write Ring handlers and middlewares</li>
 </span><span class='line'>
 </span><span class='line'><span class="nv">&lt;p&gt;</span><span class="p">(</span><span class="nf">server/start</span> <span class="mi">8080</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Bowling kata]]></title>
-    <link href="http://zetafish.github.com/blog/2011/11/01/bowling-kata/"/>
-    <updated>2011-11-01T00:41:00+01:00</updated>
-    <id>http://zetafish.github.com/blog/2011/11/01/bowling-kata</id>
-    <content type="html"><![CDATA[<p>The bowling kata is described
-<a href="http://butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt">here</a>
-by Uncle Bob. Bowling has the following rules:</p>
-
-<ul>
-<li>A game consists of 10 frames</li>
-<li>In a frame a player has 2 opportunities to knock down 10 pins</li>
-<li>Score for the frame is number of knocked down pins plus bonuses for
-spares and strikes</li>
-<li>A spare is when a player knocks down 10 in two tries</li>
-<li>The bonus for a spare frame is pins knocked down in next roll</li>
-<li>A strike is when a player knocks down 10 pins in the first try</li>
-<li>The bonus for a strike frame is pins knocked down in next two rolls</li>
-<li>In the tenth frame a player who rolls a spare or strike is allowed
-to roll the extra balls to complete the bonuses.</li>
-</ul>
-
-
-<p>First we make a simple failing test</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">kata</span><span class="o">.</span><span class="nv">test</span><span class="o">.</span><span class="nv">bowling</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">kata</span><span class="o">.</span><span class="nv">bowling</span><span class="p">])</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">clojure</span><span class="o">.</span><span class="nv">test</span><span class="p">]))</span><span class="nv">&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">&lt;p&gt;</span><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-gutter-game</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">0</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">0</span><span class="p">)))))</span>      <span class="nv">&lt;br/&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Which is simply implemented as
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">defn </span><span class="nv">score-game</span> <span class="p">[</span><span class="nv">rolls</span><span class="p">]</span>
-</span><span class='line'>  <span class="mi">0</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Add a next test:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-ones-game</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">20</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">1</span><span class="p">)))))</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Now this test fails so we modify the score-game
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">defn </span><span class="nv">score-game</span> <span class="p">[</span><span class="nv">rolls</span><span class="p">]</span>
-</span><span class='line'>  <span class="p">(</span><span class="nb">reduce </span><span class="nv">+</span> <span class="p">(</span><span class="nb">take </span><span class="mi">20</span> <span class="nv">rolls</span><span class="p">)))</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Now add a spare
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-spare</span>
-</span><span class='line'>  <span class="p">(</span><span class="nf">is</span> <span class="p">(</span><span class="nb">= </span><span class="mi">16</span> <span class="p">(</span><span class="nf">score-game</span> <span class="p">(</span><span class="nb">concat </span><span class="p">[</span><span class="mi">5</span> <span class="mi">5</span> <span class="mi">3</span><span class="p">]</span> <span class="p">(</span><span class="nb">repeat </span><span class="mi">0</span><span class="p">))))))</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>...More to follow...</p>
 ]]></content>
   </entry>
   
