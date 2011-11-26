@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blog | Stumbling in the Dark]]></title>
+  <link href="http://zetafish.github.com/blog/categories/blog/atom.xml" rel="self"/>
+  <link href="http://zetafish.github.com/"/>
+  <updated>2011-11-26T03:02:26+01:00</updated>
+  <id>http://zetafish.github.com/</id>
+  <author>
+    <name><![CDATA[Zetafish (Endymion Kasanardjo)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My own .info domain]]></title>
+    <link href="http://zetafish.github.com/blog/2011/11/26/my-own-info-domain/"/>
+    <updated>2011-11-26T02:34:00+01:00</updated>
+    <id>http://zetafish.github.com/blog/2011/11/26/my-own-info-domain</id>
+    <content type="html"><![CDATA[<p>Today I had a day off after a looooong day of traffic jams and a gig
+at the <a href="http://www.odeondespiegel.nl/home">Odeon</a> theater in Zwolle.
+Anyway having a day off does not mean no sitting behind the computer.
+On the contrary, now that I have the time let's start hacking.</p>
+
+<h3>Github</h3>
+
+<p>First I started organizing my github projects. Some searching pointed
+me in the direction of <em>Organizations</em>. A useful concept and it fitted
+nicely with my plan of creating accounts per customer. So I created
+some gmail accounts, one for each customer and then created parallel
+accounts on github. Finally I moved the projects to the correct
+organization.</p>
+
+<h3>Personal domain</h3>
+
+<p>Secondly I decided that it would be a cool idea to have a personal
+domain point to this blog at <code>http://zetafish.github.com/</code>. This was
+in the end also pretty simple. I registered the endymionkasanardjo.nl
+domain on <a href="http://eksolutions.eu">eksolutions.eu</a> which seemed a sweet
+deal with just 5 EURO for a year. However I did not immediately see
+how to setup the forwarding. It turned out that forwarding costs an
+additional 2.40 EURO. But when looking for how to setup the forwarding
+I stumbled on the <a href="http://www.godaddy.com/">godaddy</a>, offering a .info
+domain for a measly 1.6 EURO with full access to the DNS records.</p>
+
+<p>Hurray. Now I have <code>http://blog.endymionkasanardjo.info/</code> pointing to
+my blog at github. The only thing that remains is finding out why I
+get the <em>Page does not exist</em> message from github. Telling me that no
+blog lives at <code>username.github.com</code>.</p>
+]]></content>
+  </entry>
+  
+</feed>
