@@ -2,26 +2,30 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://zetafish.github.com/blog/2011/11/01/bowling-kata/</loc>
-        <lastmod>2011-11-26T02:24:06+01:00</lastmod>
+        <lastmod>2011-11-26T22:53:44+01:00</lastmod>
     </url>
     <url>
         <loc>http://zetafish.github.com/blog/2011/11/01/using-octopus/</loc>
-        <lastmod>2011-11-26T02:24:06+01:00</lastmod>
+        <lastmod>2011-11-26T22:53:44+01:00</lastmod>
     </url>
     <url>
         <loc>http://zetafish.github.com/blog/2011/11/23/web-frameworks-for-clojure/</loc>
-        <lastmod>2011-11-26T03:50:56+01:00</lastmod>
+        <lastmod>2011-11-26T22:53:44+01:00</lastmod>
     </url>
     <url>
         <loc>http://zetafish.github.com/blog/2011/11/26/my-own-info-domain/</loc>
-        <lastmod>2011-11-26T03:16:59+01:00</lastmod>
+        <lastmod>2011-11-26T22:53:44+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://zetafish.github.com/blog/2011/11/26/changing-styles/</loc>
+        <lastmod>2011-11-28T08:04:20+01:00</lastmod>
     </url>
     <url>
         <loc>http://zetafish.github.com/blog/archives/</loc>
-        <lastmod>2011-11-26T03:50:56+01:00</lastmod>
+        <lastmod>2011-11-28T08:04:20+01:00</lastmod>
     </url>
     <url>
         <loc>http://zetafish.github.com/</loc>
-        <lastmod>2011-11-26T03:50:56+01:00</lastmod>
+        <lastmod>2011-11-28T08:04:20+01:00</lastmod>
     </url>
 </urlset>

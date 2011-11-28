@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Stumbling in the Dark]]></title>
   <link href="http://zetafish.github.com/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://zetafish.github.com/"/>
-  <updated>2011-11-26T22:45:18+01:00</updated>
+  <updated>2011-11-28T08:04:21+01:00</updated>
   <id>http://zetafish.github.com/</id>
   <author>
     <name><![CDATA[Zetafish (Endymion Kasanardjo)]]></name>
@@ -59,13 +59,7 @@ rake generate
 rake deploy
 </code></pre>
 
-<p>Yipeeeee. I am fully online now, and you can visit me on:</p>
-
-<ul>
-<li><a href="http://www.endymionkasanardjo.info/">http://www.endymionkasanardjo.info/</a></li>
-<li><a href="http://blog.endymionkasanardjo.info/">http://blog.endymionkasanardjo.info/</a></li>
-</ul>
-
+<p>Yipeeeee. I am fully online now, and you can visit me on <a href="http://endymionkasanardjo.info/">http://endymionkasanardjo.info/</a></p>
 ]]></content>
   </entry>
   

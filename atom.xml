@@ -4,7 +4,7 @@
   <title><![CDATA[Stumbling in the Dark]]></title>
   <link href="http://zetafish.github.com/atom.xml" rel="self"/>
   <link href="http://zetafish.github.com/"/>
-  <updated>2011-11-26T22:45:18+01:00</updated>
+  <updated>2011-11-28T08:04:21+01:00</updated>
   <id>http://zetafish.github.com/</id>
   <author>
     <name><![CDATA[Zetafish (Endymion Kasanardjo)]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Changing styles]]></title>
+    <link href="http://zetafish.github.com/blog/2011/11/26/changing-styles/"/>
+    <updated>2011-11-26T23:04:00+01:00</updated>
+    <id>http://zetafish.github.com/blog/2011/11/26/changing-styles</id>
+    <content type="html"><![CDATA[<p>The documentation of octopress describes
+<a href="http://octopress.org/docs/theme/template/">here</a> how to change the
+style of the generated files.</p>
+
+<h2>the <HEAD></h2>
+
+<p>The <code>&lt;HEAD&gt;</code> element is described in
+<code>/source/_includes/custom/head.html</code>. Following the link to
+<a href="http://google.com/webfonts">Google webfonts</a> presented me with a
+whole world of fonts. How do I choose one?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My own .info domain]]></title>
@@ -59,13 +77,7 @@ rake generate
 rake deploy
 </code></pre>
 
-<p>Yipeeeee. I am fully online now, and you can visit me on:</p>
-
-<ul>
-<li><a href="http://www.endymionkasanardjo.info/">http://www.endymionkasanardjo.info/</a></li>
-<li><a href="http://blog.endymionkasanardjo.info/">http://blog.endymionkasanardjo.info/</a></li>
-</ul>
-
+<p>Yipeeeee. I am fully online now, and you can visit me on <a href="http://endymionkasanardjo.info/">http://endymionkasanardjo.info/</a></p>
 ]]></content>
   </entry>
   
