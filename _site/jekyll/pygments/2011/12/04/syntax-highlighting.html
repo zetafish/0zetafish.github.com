@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Syntax highlighting with pygments and Jekyll</title>
+   <meta name="author" content="Endymion Kasanardjo" />
+   
+   <!--
+   <link href="http://feeds.feedburner.com/tom-preston-werner" 
+         rel="alternate" 
+         title="Tom Preston-Werner" 
+         type="application/atom+xml" />
+   -->
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+   
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+
+   <!-- Typekit -->
+   <!-- <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script> -->
+   <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+</head>
+<body>
+
+<div class="site">
+  <div class="title">
+    <a href="/">Endymion Kasanardjo</a>
+    <a class="extra" href="/">home</a>
+  </div>
+  
+  <div id="post">
+<h1>Syntax highlighting with pygments and Jekyll</h1>
+<p class="meta"> 04 Dec 2011 </p>
+<p>Jekyll supports syntax highlighting out of the box. It uses pygments to do code syntax highlighting. <a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/#syntax-highlighting">Here</a> I found some tips to setup coloring scheme for pygments.</p>
+<p>On the <a href="http://pygments.org/demo">pygments</a> site you can play around with different coloring schemes to see how they look for a certain language. Once you have found a nice one create a <code>.css</code> file for example:</p>
+<div class="highlight"><pre><code class="bash">pygmentize -S emacs -f html -a .highlight &gt; syntax.css 
+</code></pre>
+</div>
+<p>And when I want to highlight a piece of Clojure code I get something like this:</p>
+<div class="highlight"><pre><code class="clojure"><span class="p">(</span><span class="k">defn </span><span class="nv">dup</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span> 
+   <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
+</code></pre>
+</div>
+<p>What I still don&#8217;t get is that the background of the syntax blocks do not get the background of pygments. Maybe the <code>screen.css</code> file is causing me trouble?</p>
+</div>
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>26 Nov 2011</span> &raquo; <a href="/blog/github/DNS/2011/11/26/my-own-info-domain.html">My own .info domain</a></li>
+    
+      <li><span>26 Nov 2011</span> &raquo; <a href="/blog/github/DNS/2011/11/26/experiment-with-textile.html">Playing around with textile</a></li>
+    
+      <li><span>23 Nov 2011</span> &raquo; <a href="/clojure/ring/compojure/moustache/noir/2011/11/23/web-frameworks-for-clojure.html">Web frameworks for clojure</a></li>
+    
+  </ul>
+</div>
+
+  
+  <div class="footer">
+    <div class="contact">
+      <p>
+        Endymion Kasanardjo <br/>
+        zetafish-at-gmail-dot-com
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="http://github.com/zetafish/">github.com/zetafish</a><br/>
+        <a href="http://twitter.com/zetafish/">twitter.com/zetafish</a><br/>
+        <a href="http://flickr.com/photos/zetafish/">flickr.com/photos/zetafish</a><br/>
+      </p>
+    </div>
+    <div class="rss">
+      <a href="http://feeds.feedburner.com/endymion-kasanardjo">
+        <img src="/images/rss.png" alt="Subscribe to RSS Feed" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<a href="http://github.com/zetafish"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+
+
+
+</body>
+</html>

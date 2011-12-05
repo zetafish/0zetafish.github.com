@@ -1,0 +1,10 @@
+safe: true
+markdown: kramdown
+pygments: true
+#auto: true
+#server: true
+#lsi: true
+#permalink: pretty
+pagination: 10
+recent_posts: 5
+titlecase: true

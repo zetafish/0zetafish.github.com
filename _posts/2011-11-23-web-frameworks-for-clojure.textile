@@ -1,0 +1,60 @@
+---
+layout: post
+title: "Web frameworks for clojure"
+date: 2011-11-23 23:37
+comments: true
+categories: clojure ring compojure moustache noir
+---
+
+Clojure has a number of frameworks for building web applications.
+
+* "Ring":http://github.com/mmcgrana/ring/wiki: De facto standard base for writing web applications in Clojure. 
+* "Compojure":http://compojure.org/: small web framework to generate Ring handler functions.
+* "Moustache":https://github.com/cgrand/moustache: micro web framework with DSL to wire Ring handlers and middlewares
+* "Noir":http://www.webnoir.org/: another micro web framework to write Ring handlers and middlewares
+  
+  
+h2. Ring
+
+Hello world in Ring
+{% highlight clojure %}
+(ns hello-world.core
+  (use ring.adapter.jetty))
+
+(defn handler [request]
+  {:status 200
+   :headers {"Content-Type" "text/html"}
+   :body "Hello World"})
+   
+(run-jetty handler {:port 8080})
+{% endhighlight %}
+
+
+h2. Compojure
+
+Hello world in Compojure
+{% highlight clojure %}
+(ns hello-world
+  (:use compojure.core, ring.adapter.jetty)
+  (:require [compojure.route :as route]))
+
+(defroutes main-routes
+  (GET "/" [] "<h1>Hello World</h1>")
+  (route/not-found "<h1>Page not found</h1>"))
+
+(run-jetty main-routes {:port 8080})
+{% endhighlight %}
+
+h2. Noir
+
+Hello world in Noir
+{% highlight clojure %}
+(ns my-app
+  (:use noir.core)
+  (:require [noir.server :as server]))
+
+(defpage "/welcome" []
+  "Hello world")
+
+(server/start 8080)
+{% endhighlight %}

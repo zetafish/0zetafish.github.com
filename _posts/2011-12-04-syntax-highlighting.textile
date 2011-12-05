@@ -1,0 +1,24 @@
+---
+layout: post
+title: Syntax highlighting with pygments and Jekyll
+date: 2011-12-04
+comments: true
+categories: [jekyll, pygments]
+---
+
+Jekyll supports syntax highlighting out of the box. It uses pygments to do code syntax highlighting. "Here":http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/#syntax-highlighting I found some tips to setup coloring scheme for pygments.
+
+On the "pygments":http://pygments.org/demo site you can play around with different coloring schemes to see how they look for a certain language. Once you have found a nice one create a @.css@ file for example:
+
+{% highlight bash session %}
+pygmentize -S emacs -f html -a .highlight > syntax.css 
+{% endhighlight %}
+
+And when I want to highlight a piece of Clojure code I get something like this:
+
+{% highlight clojure %}
+(defn dup [x] 
+   (+ x x))
+{% endhighlight %}
+
+What I still don't get is that the background of the syntax blocks do not get the background of pygments. Maybe the @screen.css@ file is causing me trouble?

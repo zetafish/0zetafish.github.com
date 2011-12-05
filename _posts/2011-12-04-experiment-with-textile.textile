@@ -1,0 +1,26 @@
+---
+layout: post
+title: Playing around with textile
+date: 2011-11-26
+comments: true
+categories: blog github DNS
+---
+
+To create HTML from markup we need two things. 
+
+* A markup language
+* A convertor from the markup to HTML
+
+Searching the net gives us:
+* "textile":http://www.textism.com/tools/textile/: a simple formatting syntax.
+* "markdown":http://daringfireball.net/projects/markdown/: both a simple formatting syntax and a tool to convert plain text to HTML
+* "RedCloth":http://redcloth.org/: a Ruby module to convert textile text to HTML
+* "kramdown":http://kramdown.rubyforge.org/: a Ruby library for parsing and converting a superset of Markdown.
+* "rdiscount":http://github.com/rtomayko/rdiscount/: a Ruby implementation of the Discount libary to parse Markdown syntax.
+* "redcarpet":https://github.com/tanoku/redcarpet: and yet another markdown parser.
+
+This blog post was written in @textile@ and it was rendered with @RedCloth@
+
+Side note: when writing blog texts in emacs it is best to turn off @Auto Fill Mode@. Because it completely messes up the generated text.
+
+
