@@ -1,0 +1,11 @@
+---
+layout: post
+title: Adding Disqus to my Jekyll generated site
+---
+This blog is generated with "Jekyl":https://github.com/mojombo/jekyll. This is a static site generator so no backing host to process comments. However adding comments is possible by using the "Disqus":http://disqus.com/ comment hosting service.
+
+First I register my site with Disqus. This involved setting up a user account and then registering my blog. 
+
+After registration I copied the "Universal Code":http://docs.disqus.com/developer/universal and pasted it in the @_post.html@ layout template
+
+

@@ -13,22 +13,30 @@ Clojure has a number of frameworks for building web applications.
 * "Moustache":https://github.com/cgrand/moustache: micro web framework with DSL to wire Ring handlers and middlewares
 * "Noir":http://www.webnoir.org/: another micro web framework to write Ring handlers and middlewares
   
+h2. Ring
+
+Hello world in Ring
+{% highlight clojure %}
+(defn[] )
+{% endhighlight %}
   
+Nice one 
+
 h2. Ring
 
 Hello world in Ring
 {% highlight clojure %}
 (ns hello-world.core
   (use ring.adapter.jetty))
-
 (defn handler [request]
   {:status 200
    :headers {"Content-Type" "text/html"}
    :body "Hello World"})
-   
 (run-jetty handler {:port 8080})
+
 {% endhighlight %}
 
+That was that
 
 h2. Compojure
 

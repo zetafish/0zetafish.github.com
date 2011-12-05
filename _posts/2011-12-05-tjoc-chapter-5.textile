@@ -1,0 +1,9 @@
+---
+layout: post
+title: Study notes on TJoC - chapter 5
+categories: [clojure, TJoC]
+---
+h3. persistent sets
+
+Sets in Clojure are like we know about sets
+
