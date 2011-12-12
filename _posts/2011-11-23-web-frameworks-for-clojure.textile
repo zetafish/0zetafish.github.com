@@ -16,31 +16,19 @@ Clojure has a number of frameworks for building web applications.
 h2. Ring
 
 Hello world in Ring
-{% highlight clojure %}
-(defn[] )
-{% endhighlight %}
-  
-Nice one 
 
-h2. Ring
-
-Hello world in Ring
 {% highlight clojure %}
-(ns hello-world.core
-  (use ring.adapter.jetty))
 (defn handler [request]
   {:status 200
    :headers {"Content-Type" "text/html"}
-   :body "Hello World"})
+   :body "Hello World"} )
 (run-jetty handler {:port 8080})
-
 {% endhighlight %}
-
-That was that
-
+  
 h2. Compojure
 
 Hello world in Compojure
+
 {% highlight clojure %}
 (ns hello-world
   (:use compojure.core, ring.adapter.jetty)
@@ -56,6 +44,7 @@ Hello world in Compojure
 h2. Noir
 
 Hello world in Noir
+
 {% highlight clojure %}
 (ns my-app
   (:use noir.core)
