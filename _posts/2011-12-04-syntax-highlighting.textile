@@ -21,4 +21,11 @@ And when I want to highlight a piece of Clojure code I get something like this:
    (+ x x))
 {% endhighlight %}
 
-What I still don't get is that the background of the syntax blocks do not get the background of pygments. Maybe the @screen.css@ file is causing me trouble?
+-What I still don't get is that the background of the syntax blocks do
+ not get the background of pygments. Maybe the @screen.css@ file is
+ causing me trouble?-
+
+It was indeed the @screen.css@. Next thing to do is to dig into CSS
+and see what I can improve with the sheets on this blog. So far I like
+the look and colors.
+

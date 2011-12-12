@@ -1,45 +1,58 @@
 body {
-background: #373737;
-color:#e5e5e5;
-font:86% 'lucida grande','lucida sans unicode',Verdana,Tahoma,Arial,sans-serif;
-line-height:1.2em;
-margin:0 auto;
-padding:0;
+    background: #373737;
+    color:#e5e5e5;
+    font:100% 'lucida grande','lucida sans unicode',Verdana,Tahoma,Arial,sans-serif;
+    line-height:1.2em;
+    margin:0 auto;
+    padding:0;
 }
 
 label { margin-left:5px; }
 
 a {
-color:#0383c9;
-font-weight:700;
-text-decoration:none;
+    color:#0383c9;
+    font-weight:700;
+    text-decoration:none;
 }
 
 a:hover {
-text-decoration:underline;
-color: #f5a2c6;
+    text-decoration:underline;
+    color: #f5a2c6;
 }
 
 a img {
-border:0;
+    border:0;
 }
 
 p {
-margin:0 0 18px 0px;
+    margin:0 0 18px 0px;
+}
+
+p>code {
+#    border: 1px solid #ddd;
+    font-size: 95%;
+    color: yellow;
+    padding: 0.2 em
 }
 
 ul,ol,dl {
-font-size:1em;
-margin:2px 0 16px 0px;
+    font-size:1em;
+    margin:2px 0 16px 0px;
 }
 
 ul ul,ol ol {
-margin:4px 0 4px 10px;
+    margin:4px 0 4px 10px;
 }
 
-.posts { padding:0;}
+.posts { 
+    padding:0;
+}
 
-li { padding:0 4px; color:#ccc; list-style: none; }
+li { 
+    padding:0 4px; 
+    color:#ccc; 
+    list-style: none; 
+}
 
 ul.posts li span { float:right; font-family:monofur, monaco, courier; color:#888; }
 ul.posts li a { font-weight:200;}
@@ -47,31 +60,34 @@ ul.posts li a { font-weight:200;}
 div#post ul li { list-style: circle; }
 
 blockquote {
-border-left:8px solid #0383c9;
-background: #474747;
-font-size:1.0em;
-margin:20px 10px;
-padding:10px;
-padding-left:20px;
+    border-left:8px solid #0383c9;
+    background: #474747;
+    font-size:1.0em;
+    margin:20px 10px;
+    padding:10px;
+    padding-left:20px;
 }
+
 blockquote span {
-	display: block; 
-	float: right;
-	padding-right:20px;
+    display: block; 
+    float: right;
+    padding-right:20px;
 }
 
 pre { 
-font-family: Monaco, Courier;
-background: #191919;
-border: dashed 2px #e5e5e5;
- width: 600px;
-padding: 5px;
-font-size:1em;
-line-height: 2em;
-clear:both;
+    font-family: Monaco, Courier;
+    background: #191919;
+    border: dashed 2px #e5e5e5;
+    width: 600px;
+    padding: 5px;
+    font-size:1em;
+    line-height: 1.1em;
+    clear:both;
 }
 
-.scoot { margin:5px 5px 5px 0px; }
+.scoot { 
+    margin:5px 5px 5px 0px; 
+}
 
 .terminal
 {
@@ -81,46 +97,46 @@ color: #ddd;
 
 .im
 {
-font-size:0.95em;
-line-height: 1.4em;
-width: 650px;
-font-family: 'lucida grande','lucida sans','lucida sans unicode',helvetica,tahoma;
-padding: 5px;
-background-color:#FFB604;
-color:#222;
-border: solid 1px #fff;
+    font-size:0.95em;
+    line-height: 1.4em;
+    width: 650px;
+    font-family: 'lucida grande','lucida sans','lucida sans unicode',helvetica,tahoma;
+    padding: 5px;
+    background-color:#FFB604;
+    color:#222;
+    border: solid 1px #fff;
 }
 
 h1 {
-color:#0383c9;
-font-size:4.7em;
-letter-spacing:-5px;
-margin:0 0 30px 0px;
-padding:50px 0 0 0;;
+    color:#0383c9;
+    font-size:4.7em;
+    letter-spacing:-5px;
+    margin:0 0 30px 0px;
+    padding:50px 0 0 0;;
 
 }
 
 h1 a {
-color:#0383c9;
-text-transform:none;
+    color:#0383c9;
+    text-transform:none;
 }
 
 h1 a:hover { color:#fba919 ;}
 
 #logo {
-	margin: -65px 10px -30px -50px;
-	float:right;
-	background: url('/images/gems-15.png');
-	height: 213px; width:204px;
+    margin: -65px 10px -30px -50px;
+    float:right;
+    background: url('/images/gems-15.png');
+    height: 213px; width:204px;
 }
 
 .publish_date {
-	margin-top:-8px;
-	margin-bottom:0px;
-	text-align:right;
-	font-size:0.8em;
-	width:490px;
-	color: #23af4c;
+    margin-top:-8px;
+    margin-bottom:0px;
+    text-align:right;
+    font-size:0.8em;
+    width:490px;
+    color: #23af4c;
 
 }
 
@@ -138,14 +154,6 @@ a.orange:hover { color:#fba919;  padding:1px; border: solid 2px #fba919; text-de
 .slogan a { padding:3px; line-height: 2.5em; }
 
 .commentslink { margin-bottom: 35px;display:block;border-bottom:solid 1px #dadada;padding-bottom:25px; }
-/*
-pink #f5a2c6
-light-green #23af4c
-dark-green #2f8b49 
-light-orange #fba919
-dark-orange #e39c1f
-
-*/
 
 h2 {
 border-bottom:1px solid #e5e5e5;
